@@ -66,11 +66,11 @@ def generate_summary(text,num_sentences=3):
 	return ' '. join(summary_sentences)
 
 if __name__=="__main__":
-	input_text ="""
-	Natural language processing (NLP) is a subfield of artificial intelligence.
-	It involves the development of algorithms and models that enact NLP.
-	NLP is used in various applications, including chatbots, language Understanding, and language generation.
-	This program demonstrates a simple text summarization using NLP"""
+	file_path = "input.txt"  # Replace 'input.txt' with the path to your text file
+
+ 	# Open and read the content of the file
+    	with open(file_path, 'r', encoding='utf-8') as file:
+        	input_text = file.read()
 summary = generate_summary(input_text)
 print("Origina1 Text: ")
 print (input_text )
